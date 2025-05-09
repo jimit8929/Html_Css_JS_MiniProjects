@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../dist/output.css" />
+  <title>Random Background Changer</title>
+</head>
+
+<body class="bg-cyan-400 h-screen flex flex-col justify-center items-center transition-all duration-300">
+
+  <div class="relative flex flex-col items-center group min-w-[300px]">
+
+    <span id="content"
+    class="mb-4 text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-50">
+      Click To Change The BG
+    </span>
+
+    <button id="btn"
+    class="px-6 py-4 bg-transparent border-2 border-white text-white transition-all duration-700 active:py-1 active:px-2 hover:bg-white hover:text-black cursor-pointer">
+      Click Me
+    </button>
+  </div>
+
+  <h2 id="hexcode" class="text-white mt-6 font-extrabold text-3xl">#8a2be2</h2>
+
+  <script src="app.js"></script>
+</body>
+</html>
