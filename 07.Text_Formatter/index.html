@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatter</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="text-center bg-[#ccef] h-[100vh] flex flex-col justify-center items-center">
+
+    <div class="container p-24 bg-black">
+        <div class="input-container ">
+            <h2 class="text-[#fff] font-sans text-5xl mb-10">Type in Your Words</h2>
+            <input type="text" id="input-field" placeholder="Type your Text Here" class="w-[100%] p-3 mb-5 outline-none">
+        </div>
+
+        <div class="btns-container space-x-4">
+            <button class="btn uppercase px-5 py-5 font-extrabold text-2xl cursor-pointer bg-blue-500 text-[#fff] border-none m-0 h-24 w-24">ABC</button>
+            <button class="btn lowercase px-3 py-5 font-extrabold text-2xl cursor-pointer bg-blue-500 text-[#fff] border-none m-0 h-24 w-24">abc</button>
+            <button class="btn capitalize px-3 py-5 font-extrabold text-2xl cursor-pointer bg-blue-500 text-[#fff] border-none m-0 h-24 w-24">Abc</button>
+            <button class="btn bold px-3 py-5 font-extrabold cursor-pointer text-2xl bg-blue-500 text-[#fff] border-none m-0 h-24 w-24">B</button>
+            <button class="btn italic px-3 py-5 font-extrabold cursor-pointer text-2xl bg-blue-500 text-[#fff] border-none m-0 h-24 w-24">/</button>
+            <button class="btn underline px-3 py-5 font-extrabold cursor-pointer text-2xl bg-blue-500 text-[#fff] border-none m-0 h-24 w-24">ABC</button>
+        </div>
+
+        <p id="output-field" class="w-[100%] h-[86px] bg-[#ccef] text-[#000] border-solid rounded-xl border-[#555] flex justify-center items-center m-auto mt-12 font-serif">Output</p>
+
+    </div>    
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
