@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Cards </title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+
+
+<style>
+    .slide {
+      transition: all 700ms ease-in;
+      cursor: pointer;
+    }
+    .slide h3 {
+      transition: opacity 0.3s ease-in 0.4s;
+    }
+    .slide.active {
+      flex: 5;
+    }
+    .slide.active h3 {
+      opacity: 1;
+    }
+    @media (max-width: 480px) {
+      .slide:nth-of-type(4),
+      .slide:nth-of-type(5) {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="m-0 min-h-screen flex items-center justify-center bg-black text-white font-sans transition-colors duration-500" id="body">
+
+  <div class="flex w-screen">
+
+
+    <div class="absolute top-5 left-1/2 transform -translate-x-1/2 z-50 mt-3 hover:scale-125 ">
+        <button id="themeToggle" class="px-4 py-2 bg-gray-200 text-black font-semibold rounded-md shadow hover:bg-cyan-200 transition">
+          Toggle Theme
+        </button>
+      </div>
+
+
+
+    <div
+      class="slide relative h-[80vh] flex-[0.5] rounded-[50px] m-2 bg-cover bg-center bg-no-repeat active"
+      style="background-image: url('https://wallpapercave.com/dwp2x/wp3163455.jpg')">
+
+      <h3 class="absolute bottom-5 left-5 m-0 opacity-0 text-xl">Dark Siders 2</h3>
+    </div>
+    
+
+    <div
+      class="slide relative h-[80vh] flex-[0.5] rounded-[50px] m-2 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('https://wallpapercave.com/dwp2x/wp3163465.jpg')">
+
+      <h3 class="absolute bottom-5 left-5 m-0 opacity-0 text-xl">Assassin's Creed</h3>
+    </div>
+
+
+    <div
+      class="slide relative h-[80vh] flex-[0.5] rounded-[50px] m-2 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('https://wallpapercave.com/dwp2x/wp4257699.jpg')">
+
+      <h3 class="absolute bottom-5 left-5 m-0 opacity-0 text-xl">Dishonored</h3>
+    </div>
+
+
+    <div
+      class="slide relative h-[80vh] flex-[0.5] rounded-[50px] m-2 bg-cover bg-center bg-no-repeat hidden sm:block"
+      style="background-image: url('https://wallpapercave.com/dwp2x/wp4257708.jpg')">
+
+      <h3 class="absolute bottom-5 left-5 m-0 opacity-0 text-xl">Watch Dogs 2</h3>
+    </div>
+
+
+    <div
+      class="slide relative h-[80vh] flex-[0.5] rounded-[50px] m-2 bg-cover bg-center bg-no-repeat hidden sm:block"
+      style="background-image: url('https://wallpapercave.com/dwp2x/wp3163453.jpg')">
+
+      <h3 class="absolute bottom-5 left-5 m-0 opacity-0 text-xl">Call Of Duty</h3>
+    </div>
+
+  </div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
