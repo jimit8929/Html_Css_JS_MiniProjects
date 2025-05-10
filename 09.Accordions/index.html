@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+
+<style>
+    .accordion-item-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .icon::before,
+    .icon::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      border-radius: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    .icon::before {
+      width: 14px;
+      height: 2px;
+    }
+    .icon::after {
+      width: 2px;
+      height: 14px;
+    }
+    .accordion-item-header.active > .icon::before {
+      transform: rotate(180deg);
+    }
+    .accordion-item-header.active > .icon::after {
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body class="flex justify-center bg-gray-900 min-h-screen font-sans">
+  <div class="flex flex-col justify-center mt-8 text-center max-w-xl bg-gray-800 p-16 rounded-lg h-[65%]">
+    <div class="text-xl font-bold text-white mb-6">JavaScript</div>
+
+    <!-- Accordion Item -->
+    <div class="w-[90%] mx-auto">
+      <div class="accordion-item">
+        <div class="accordion-item-header flex justify-between items-center gap-4 min-h-[3.5rem] cursor-pointer">
+          <div class="text-white/80 text-lg font-normal text-left">What Is JavaScript</div>
+          <span class="icon relative flex justify-center items-center shrink-0 border-2 text-white w-9 h-9 rounded-full"></span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="w-[80%] pt-4 text-white text-left">
+            JavaScript, often abbreviated JS, is a programming language that is
+            one of the core technologies of the World Wide Web, alongside HTML
+            and CSS. Over 97% of websites use JavaScript on the client side for
+            web page behavior, often incorporating third-party libraries.
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-px my-2 bg-slate-200"></div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header flex justify-between items-center gap-4 min-h-[3.5rem] cursor-pointer">
+          <div class="text-white/80 text-lg font-normal text-left">Java & JavaScript</div>
+          <span class="icon relative flex justify-center items-center shrink-0 border-2 text-white w-9 h-9 rounded-full"></span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="w-[80%] pt-4 text-white text-left">
+            Key differences between Java and JavaScript: Java is an OOP
+            programming language while Java Script is an OOP scripting language.
+            Java creates applications that run in a virtual machine or browser
+            while JavaScript code is run on a browser only. Java code needs to
+            be compiled while JavaScript code are all in text.
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-px my-2 bg-slate-200"></div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header flex justify-between items-center gap-4 min-h-[3.5rem] cursor-pointer">
+          <div class="text-white/80 text-lg font-normal text-left">Can I Learn JavaScript Without Java?</div>
+          <span class="icon relative flex justify-center items-center shrink-0 border-2 text-white w-9 h-9 rounded-full"></span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="w-[80%] pt-4 text-white text-left">
+            You do not need to know Java to learn JavaScript. Despite their
+            names, the two languages have very little in common and are used for
+            completely different areas of development. You can learn either
+            language first but learning Java is not a prerequisite to picking up
+            JavaScript
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-px my-2 bg-slate-200"></div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header flex justify-between items-center gap-4 min-h-[3.5rem] cursor-pointer">
+          <div class="text-white/80 text-lg font-normal text-left">JavaScript & EcmaScript</div>
+          <span class="icon relative flex justify-center items-center shrink-0 border-2 text-white w-9 h-9 rounded-full"></span>
+        </div>
+        <div class="accordion-item-body">
+          <div class="w-[80%] pt-4 text-white text-left">
+            JavaScript is a general-purpose scripting language that conforms to
+            the ECMAScript specification. The ECMAScript specification is a
+            blueprint for creating a scripting language. JavaScript is an
+            implementation of that blueprint. On the whole, JavaScript
+            implements the ECMAScript specification as described in ECMA-262.
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-px my-2 bg-slate-200"></div>
+    </div>
+  </div>
+  
+    <script src="app.js"></script>
+</body>
+</html>
