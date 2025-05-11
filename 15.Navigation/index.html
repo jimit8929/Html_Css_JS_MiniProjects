@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tabbed Sections</title>
+  <link rel="stylesheet" href="/dist/output.css"/>
+
+  <style>
+    .sections section:not(.visible) {
+        display: none;
+      }
+  </style>
+</head>
+<body class="bg-cyan-400 font-sans">
+
+  <div class="tadded-container w-11/12 max-w-4xl mx-auto py-8">
+
+    <div class="container mb-8">
+      <div class="menu_Links text-center">
+
+        <ul class="inline-flex flex-wrap justify-center space-x-8 md:space-x-12">
+          <li data-section="About"
+              class="active px-4 py-2 rounded-md font-bold text-white bg-black cursor-pointer transition hover:bg-gray-800">
+            About
+          </li>
+          <li data-section="Courses"
+              class="px-4 py-2 rounded-md font-bold text-white bg-transparent cursor-pointer transition hover:bg-black hover:text-white">
+            Courses
+          </li>
+          <li data-section="Contact"
+              class="px-4 py-2 rounded-md font-bold text-white bg-transparent cursor-pointer transition hover:bg-black hover:text-white">
+            Contact
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sections">
+
+      <section class="about_section visible animate-fadeIn bg-white mx-auto p-6 rounded-md text-center space-y-6"
+               data-section="About">
+        <h2 class="text-4xl font-bold">About Me</h2>
+        <img src="./images/Self.jpg"
+             alt="About Image"
+             class="w-48 h-48 object-cover rounded-full mx-auto"/>
+        <h4 class="text-2xl font-light">JIMIT MEHTA</h4>
+        <p class="text-gray-700 leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quidem quo voluptatem sed vel 
+          atque suscipit totam debitis iusto asperiores ex quae, voluptates tenetur necessitatibus porro 
+          nihil facilis modi incidunt praesentium eos velit minus? ...
+        </p>
+      </section>
+
+   
+        <section class="courses_section overflow-hidden bg-white mx-auto p-6 rounded-md space-y-6" data-section="Courses">
+            <h2 class="text-4xl font-bold text-center">COURSES</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <a href="https://www.youtube.com/playlist?list=PLSDeUiTMfxW41HftXEup62r1zq5I1KosE"
+                        class="team_box shadow-md p-4 rounded-md flex flex-col items-center bg-white hover:shadow-lg transition">
+                        <img src="./images/html.png" class="w-full h-32 object-cover rounded-md mb-4"/>
+                        <h4 class="font-semibold">HTML COMPLETE GUIDE</h4>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/playlist?list=PLSDeUiTMfxW41HftXEup62r1zq5I1KosE"
+                        class="team_box shadow-md p-4 rounded-md flex flex-col items-center bg-white hover:shadow-lg transition">
+                        <img src="./images/css.png" class="w-full h-32 object-cover rounded-md mb-4"/>
+                        <h4 class="font-semibold">CSS COMPLETE GUIDE</h4>
+                    </a>
+
+                    <a href="https://www.youtube.com/playlist?list=PLSDeUiTMfxW5iYhG1Hv4JKQL0Rzylb76p"
+                        class="team_box shadow-md p-4 rounded-md flex flex-col items-center bg-white hover:shadow-lg transition">
+                        <img src="./images/js.png" class="w-full h-32 object-cover rounded-md mb-4"/>
+                        <h4>NEXT LEVEL JAVASCRIPT</h4>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/playlist?list=PLSDeUiTMfxW7sbxhTa8vJZ9xyKret_RiN" 
+                        class="team_box shadow-md p-4 rounded-md flex flex-col items-center bg-white hover:shadow-lg transition">
+                        <img src="./images/vscode.png" class="w-full h-32 object-cover rounded-md mb-4"/>
+                        <h4>VSCODE COMPLETE GUIDE</h4>
+                    </a>
+
+                    <a href="https://www.youtube.com/playlist?list=PLSDeUiTMfxW5MYRChTYlqKwgXE289Flok"
+                         class="team_box shadow-md p-4 rounded-md flex flex-col items-center bg-white hover:shadow-lg transition">
+                        <img src="./images/git and github.png"  class="w-full h-32 object-cover rounded-md mb-4"/>
+                        <h4>GIT AND GITHUB COMPLETE GUDIE</h4>
+                    </a>
+        
+                    <a href="https://www.youtube.com/playlist?list=PLSDeUiTMfxW5oeotfGiqAZC0LDQ9Y-Q52"
+                        class="team_box  shadow-md p-4 rounded-md flex flex-col items-center bg-white hover:shadow-lg transition">
+                        <img src="./images/go.png" class="w-full h-32 object-cover rounded-md mb-4"/>
+                        <h4>GOLANG COMPLETE GUIDE</h4>
+                    </a>
+       
+                </div>
+        </section>
+
+      
+        <section class="contact_section  bg-white mx-auto p-6 rounded-md text-center space-y-4" data-section="Contact">
+            <h2 class="text-4xl font-bold">Contact</h2>
+            
+                <div class="social_Links flex flex-wrap justify-center gap-4">
+        
+                    <a href="https://www.youtube.com/channel/UCbBt6Ks7M5BZx_GHgGO_UNQ"
+                    class="text-white px-4 py-2 bg-[#1da1f2] rounded transition hover:opacity-80">
+                    YouTube
+                    </a>
+          
+                    <a href="https://twitter.com/AcademyWebdev"
+                    class="text-white px-4 py-2 bg-[#1da1f2] rounded transition hover:opacity-80">
+                    Twitter
+                    </a>
+                    
+                    <a href="https://www.udemy.com/user/huxn-webdev/"
+                    class="text-white px-4 py-2 bg-[#1da1f2] rounded transition hover:opacity-80">
+                    Udemy
+                    </a>
+          
+                    <a href="https://www.instagram.com/huxn_webdev/"
+                    class="text-white px-4 py-2 bg-[#1da1f2] rounded transition hover:opacity-80">
+                    Instagram
+                    </a>
+                    
+                    <a href="https://github.com/huxn-webdev"
+                    class="text-white px-4 py-2 bg-[#1da1f2] rounded transition hover:opacity-80">
+                    Github
+                    </a>
+                </div>
+        </section>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
