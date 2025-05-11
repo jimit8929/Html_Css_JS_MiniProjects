@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="grid place-items-center">
+    
+    <div class="container grid place-items-center bg-yellow-400 w-[98vw] h-[100vh]">
+        <div class="class w-[50%]">
+            <div id="box" class="bg-white max-w-[100%] h-[20rem] mb-[10%] border-b-4 border-solid"></div>
+
+            <div class="sliders flex flex-col gap-4 mt-6 text-black font-semibold">
+                <label class="flex flex-col"> X-Axis (Horizontal Offset)
+                  <input type="range" value="0" id="sldr1" min="-25" max="25">
+                </label>
+
+                <label class="flex flex-col"> Y-Axis (Vertical Offset)
+                  <input type="range" value="0" id="sldr2" min="-25" max="25">
+                </label>
+
+                <label class="flex flex-col"> Blur Radius
+                  <input type="range" value="10" id="sldr3" min="0" max="50">
+                </label>
+
+                <label class="flex flex-col"> Spread Radius
+                  <input type="range" value="0" id="sldr4" min="0" max="50">
+                </label>
+                
+              </div>
+
+            <div id="outputcode">
+                <input type="text" id="css-code" class="w-[85%] p-4  rounded-none mt-5 border-none border-b-2 border-b-slate-600 text-center gap-x-4" readonly/>
+                <button id="copy" class="bg-white border-none px-2 py-4 cursor-pointer font-bold transition-all ease-in duration-[0.5] hover:border-none hover:text-black hover:scale-110">Copy</button>
+            </div>
+
+            <div class="colors">
+                <input type="color" id="shadowcolor" class="w-[100%] border-none mt-5"/>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
