@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Captcha</title>
+  <link rel="stylesheet" href="/dist/output.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+  <style>
+    .input-area input:valid + .check-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="w-[100%] flex justify-around items-center">
+        <div class="wrapper w-[50%] bg-[#c81a54] px-32 py-28 box-border text-center flex flex-col justify-around items-center">
+            <h1 class="text-white text-2xl font-medium text-center">Random Captcha</h1>
+        
+            <div class="captcha-area flex items-center justify-center h-[65px] my-8">
+        
+                <div class="captcha-container user-select-none bg-black w-[450px] h-full relative rounded-md text-center">
+                    <span class="captcha absolute top-1/2 w-full text-white text-[35px] tracking-[10px] transform -translate-x-1/2 -translate-y-1/2"></span>
+                </div>
+        
+              <button class="reload-btn ml-5 w-[75px] h-full bg-white text-[#041897] rounded-md flex items-center justify-center transition-transform duration-300 hover:rotate-15">
+                <i class="fa fa-redo"></i>
+              </button>
+        
+            </div>
+
+            <div class="flex items-center justify-evenly w-[80%]">
+                <form class="input-area relative  h-[60px] flex flex-row justify-around items-center">
+                    <input type="text" placeholder="Enter Captcha" required
+                      class="w-[100%] h-full text-3xl pl-5 rounded-md border border-gray-300 outline-none"/>
+              
+                    <button type="button" class="check-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#041897] text-white text-[30px] h-[45px] px-5 opacity-0 pointer-events-none rounded-md">
+                      Check
+                    </button>
+              
+                  </form>
+            </div>
+        
+
+        
+            <div class="status-text hidden font-bold text-white text-3xl text-center mt-5">
+            </div>
+          </div>
+    </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
