@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live User Filter</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <style>
+        :root {
+            --primary-color: white;
+            --primary-label: black;
+            --secondary-label: white;
+            --white-ball: white;
+            --black-ball: black;
+        }
+
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            width: 600px;
+        }
+
+        .header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .header input {
+            border: 0;
+            border-radius: 50px;
+            font-size: 1rem;
+            padding: 10px 15px;
+            width: 100%;
+            outline: none;
+            margin-top: 10px;
+        }
+
+        .user-list {
+            background-color: white;
+            list-style-type: none;
+            padding: 0;
+            max-height: 400px;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .user-list li {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .user-list li:last-child {
+            border-bottom: none;
+        }
+
+        .user-list img {
+            border-radius: 50%;
+            object-fit: cover;
+            height: 60px;
+            width: 60px;
+            margin-right: 20px;
+        }
+
+        .user-info h4 {
+            margin: 0 0 5px;
+        }
+
+        .user-info p {
+            margin: 0;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #111;
+        }
+
+        .dark-mode .header {
+            background-color: #1a1a1a;
+        }
+
+        .dark-mode .user-list {
+            background-color: cyan;
+        }
+
+        .dark-mode .user-info p {
+            color: red;
+            font-weight: bolder;
+            font-size: 1rem;
+            text-size-adjust: 4rem;
+        }
+
+        #switch {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+
+        label {
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-color: var(--primary-label);
+            border-radius: 100px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        label::after {
+            content: "";
+            width: 40px;
+            height: 40px;
+            border-radius: 70px;
+            background-color: var(--white-ball);
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            transition: 0.5s;
+        }
+
+        #switch:checked + label:after {
+            background-color: var(--black-ball);
+            left: calc(100% - 5px);
+            transform: translateX(-100%);
+        }
+
+        #switch:checked + label {
+            background-color: var(--secondary-label);
+        }
+
+        label:active::after {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content text-2xl">
+                <h4>Search by name and/or location</h4>
+                <input type="text" id="filter" placeholder="Search" class="text-black text-3xl">
+            </div>
+            <div class="toggler-container">
+                <input type="checkbox" id="switch">
+                <label for="switch"></label>
+            </div>
+        </header>
+        <ul id="result" class="user-list">
+            <li>
+                <h3>Loading...</h3>
+            </li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+
+  </body>
+</html>
