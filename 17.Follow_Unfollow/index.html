@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Follow</title>
+    <link rel="stylesheet" href="/dist/output.css">
+  </head>
+
+     <style>
+      :root {
+        --light-bg: white;
+        --light-primary: rgb(247, 249, 250);
+        --light-secondary: rgb(240, 242, 243);
+        --light-divider: rgb(235, 237, 238);
+        --dark-bg: black;
+        --dark-primary: #15181c;
+        --dark-secondary: #2f3336;
+        --dark-divider: #2f3336;
+        --highlight-color: #e0245e;
+      }
+
+      .img-one { background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'); }
+      .img-two { background-image: url('https://images.unsplash.com/photo-1610088441520-4352457e7095?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'); }
+      .img-three { background-image: url('https://images.unsplash.com/photo-1579987102269-ac45dafda12c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=486&q=80'); }
+
+      .light-theme {
+        --background-color: var(--light-bg);
+        --primary-bg: var(--light-primary);
+        --secondary-bg: var(--light-secondary);
+        --divider: var(--light-divider);
+      }
+
+      .dark-theme {
+        --background-color: var(--dark-bg);
+        --primary-bg: var(--dark-primary);
+        --secondary-bg: var(--dark-secondary);
+        --divider: var(--dark-divider);
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="light-theme min-h-screen flex items-center justify-center bg-[var(--background-color)]">
+
+    <div class="w-[460px] mx-auto rounded-3xl bg-[var(--primary-bg)]">
+
+        <div class="flex flex-row justify-evenly items-center text-center">
+            <h1 class="text-[1.3rem] font-black pt-5 px-5 pb-[15px]">Who To Follow</h1>
+
+                <button class="themer  bg-[var(--primary-bg)] text-[1.3rem] font-bold rounded-lg px-5 pt-5 pb-[15px] ">
+                    Dark
+                </button>
+        </div>
+     
+      
+      <span class="block w-full border-t border-[var(--secondary-bg)]"></span>
+
+      <div class="flex items-center justify-around py-2.5 px-5 hover:bg-[var(--secondary-bg)]">
+        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-top img-one"></div>
+        <div class="flex-grow px-2.5">
+          <span class="font-bold block">Albert Dare</span>
+          <span class="text-[rgb(155,153,153)] block">@albertdera</span>
+        </div>
+        <button class="border border-[#e0245e] px-4 py-1.5 rounded-full font-bold bg-[#e0245e] text-white follow-button followed">
+          Unfollow
+        </button>
+      </div>
+
+      <span class="block w-full border-t border-[var(--secondary-bg)]"></span>
+
+      <div class="flex items-center justify-between py-2.5 px-5 hover:bg-[var(--secondary-bg)]">
+        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-top img-two"></div>
+        <div class="flex-grow px-2.5">
+          <span class="font-bold block">Meysam Jarahkar</span>
+          <span class="text-[rgb(155,153,153)] block">@arona</span>
+        </div>
+        <button class="border border-[#e0245e] text-[#e0245e] px-4 py-1.5 rounded-full font-bold follow-button">
+          Follow
+        </button>
+      </div>
+
+      <span class="block w-full border-t border-[var(--secondary-bg)]"></span>
+
+      <div class="flex items-center justify-between py-2.5 px-5 hover:bg-[var(--secondary-bg)]">
+        <div class="w-[50px] h-[50px] rounded-full bg-cover bg-top img-three"></div>
+        <div class="flex-grow px-2.5">
+          <span class="font-bold block">Meysam Jarahkar</span>
+          <span class="text-[rgb(155,153,153)] block">@arona</span>
+        </div>
+        <button class="border border-[#e0245e] text-[#e0245e] px-4 py-1.5 rounded-full font-bold follow-button">
+          Follow
+        </button>
+      </div>
+
+      <a href="#" class="block text-[#e0245e] pt-[15px] pb-5 px-5 hover:bg-[var(--secondary-bg)] rounded-b-3xl">
+        Show More
+      </a>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
