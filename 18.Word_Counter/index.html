@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="m-0 flex flex-col justify-center items-center h-screen">
+  <section class="container w-[600px] m-6 p-6 border border-[#ccc] rounded-md shadow-md">
+    <h1 class="text-2xl font-bold mb-6">Word Counter</h1>
+    <textarea
+      class="text-input w-full h-[225px] mb-6 resize-none p-3 box-border"
+      placeholder="Paste text here..."
+    ></textarea>
+
+    <div class="mb-2">
+      <strong>Word Count:</strong>
+      <span class="word-count">0</span>
+    </div>
+    <div class="mb-2">
+      <strong>Letter Count:</strong>
+      <span class="letter-count">0</span>
+    </div>
+    <div>
+      <strong>Number of Spaces:</strong>
+      <span class="space-count">0</span>
+    </div>
+  </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
