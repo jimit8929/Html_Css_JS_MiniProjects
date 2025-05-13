@@ -10,9 +10,9 @@
     
     <div class="container grid place-items-center bg-yellow-400 w-[98vw] h-[100vh]">
         <div class="class w-[50%]">
-            <div id="box" class="bg-white max-w-[100%] h-[20rem] mb-[10%] border-b-4 border-solid"></div>
+            <div id="box" class="bg-white max-w-[100%] h-[12rem] mb-[5%] border-b-4 border-solid"></div>
 
-            <div class="sliders flex flex-col gap-4 mt-6 text-black font-semibold">
+            <div class="sliders flex flex-col gap-4 mt-8 text-black font-semibold">
                 <label class="flex flex-col"> X-Axis (Horizontal Offset)
                   <input type="range" value="0" id="sldr1" min="-25" max="25">
                 </label>
@@ -31,14 +31,17 @@
                 
               </div>
 
-            <div id="outputcode">
-                <input type="text" id="css-code" class="w-[85%] p-4  rounded-none mt-5 border-none border-b-2 border-b-slate-600 text-center gap-x-4" readonly/>
-                <button id="copy" class="bg-white border-none px-2 py-4 cursor-pointer font-bold transition-all ease-in duration-[0.5] hover:border-none hover:text-black hover:scale-110">Copy</button>
+            <div id="outputcode" class="flex flex-row items-center justify-evenly">
+                <input type="text" id="css-code" class="w-[70%] p-4  rounded-none mt-5 border-none border-b-2 border-b-slate-600 text-center gap-x-4" readonly/>
+                <button id="copy" class="bg-white border-none px-2 py-4 mt-5 cursor-pointer font-bold transition-all ease-in duration-[0.5] hover:border-none hover:text-black hover:scale-110">Copy</button>
+
+                 <div class="colors flex justify-center items-center">
+                <input type="color" id="shadowcolor" class="border-none mt-5 w-16 h-14" placeholder="color"/>
+                </div>
+
             </div>
 
-            <div class="colors">
-                <input type="color" id="shadowcolor" class="w-[100%] border-none mt-5"/>
-            </div>
+           
         </div>
     </div>
 
